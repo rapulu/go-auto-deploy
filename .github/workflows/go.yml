@@ -36,5 +36,5 @@ jobs:
         platforms: linux/amd64
         push: true
         tags: |
-          ${{ secrets.REGISTRY_USERNAME }}/go-ci
+          ${{ secrets.REGISTRY_USERNAME }}/go-ci:latest
         
