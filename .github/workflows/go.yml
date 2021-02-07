@@ -28,7 +28,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: rapulu/${{ steps.image_tags.outputs.IMAGE_TAGS }}
+        tags: rapulu/gogitaction:latest
         path: ${{ env.context }}
         registry: ${{ secrets.REGISTRY_URI }}
         repository: ${{ secrets.REGISTRY_REPOSITORY }}/${{ env.image_name }}
