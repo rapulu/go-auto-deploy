@@ -28,9 +28,10 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
+        tags: "rapulu/${{ steps.image_tags.outputs.IMAGE_TAGS }}"
         path: ${{ env.context }}
         registry: ${{ secrets.REGISTRY_URI }}
         repository: ${{ secrets.REGISTRY_REPOSITORY }}/${{ env.image_name }}
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-        tags: "${{ steps.image_tags.outputs.IMAGE_TAGS }}"
+        
