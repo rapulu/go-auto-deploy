@@ -27,6 +27,7 @@ jobs:
     - name: Build and publish image to Quay
       uses: docker/build-push-action@v2
       with:
+        push: true
         path: ${{ env.context }}
         registry: ${{ secrets.REGISTRY_URI }}
         repository: ${{ secrets.REGISTRY_REPOSITORY }}/${{ env.image_name }}
