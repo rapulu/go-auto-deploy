@@ -36,6 +36,5 @@ jobs:
         platforms: linux/amd64
         push: true
         tags: |
-          rapulu/gogitaction:latest
-          rapulu/gogitaction:1.0.0
+          ${{ secrets.REGISTRY_USERNAME }}/go-ci
         
