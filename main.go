@@ -15,7 +15,7 @@ func main(){
 func Add(a, b int)int{
 	sum := 0
 
-	sum = a+b
+	sum = a + b
 
 	return sum
 }
