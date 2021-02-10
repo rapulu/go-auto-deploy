@@ -29,7 +29,6 @@ jobs:
       uses: redhat-actions/buildah-build@v1
       with:
         image: go-ci
-        tags: ${{ env.IMAGE_TAGS }}
         dockerfiles: ./Dockerfile
 
     - name: Push To Quay
