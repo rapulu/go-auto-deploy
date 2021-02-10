@@ -28,15 +28,15 @@ jobs:
       id: build-image
       uses: redhat-actions/buildah-build@v1
       with:
-        image: ${{ env.IMAGE_NAME }}
-        tags: ${{ env.IMAGE_TAGS }}
+        image: go-ci
+        tags: latest
         dockerfiles: ./Dockerfile
 
     - name: Push To Quay
       id: push-to-quay
       uses: redhat-actions/push-to-registry@v1
       with:
-        image: ${{ steps.build-image.outputs.image }}
+        image: go-ci
         registry: quay.io/rapulu
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
